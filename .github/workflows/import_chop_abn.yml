@@ -25,8 +25,10 @@ jobs:
       env:
         CLIENT_KEY: ${{ secrets.CLIENT_ID_ABN }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET_ABN }}
-        GET_TOKEN_URL: "https://identity-a.bit.admin.ch/realms/bfs-sis-a/protocol/openid-connect/token"
-        I14Y_API_BASE_URL: "https://api-a.i14y.admin.ch/api/partner/v1"
         CHOP_YEAR: ${{ vars.CHOP_YEAR }}
         CHOP_REVISION: ${{ vars.CHOP_REVISION }}
+        RESPONSIBLE_DEPUTY_JSON: ${{ secrets.RESPONSIBLE_DEPUTY_JSON }}
+        RESPONSIBLE_PERSON_JSON: ${{ secrets.RESPONSIBLE_PERSON_JSON }}
+        GET_TOKEN_URL: "https://identity-a.bit.admin.ch/realms/bfs-sis-a/protocol/openid-connect/token"
+        I14Y_API_BASE_URL: "https://api-a.i14y.admin.ch/api/partner/v1"
       run: python CHOPImporter.py
