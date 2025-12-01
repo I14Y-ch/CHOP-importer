@@ -1,4 +1,6 @@
 name: ABN - I14Y CHOP Importer
+permissions:
+  contents: read
 
 on:
   workflow_dispatch:  # Allows manual triggering
