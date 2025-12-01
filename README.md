@@ -2,21 +2,24 @@
 
 This repo contains a script that imports CHOP as a concept in I14Y.
 
-The CHOP API provides the codeListEntries. The title and description for the concept are defined in the `templates` folder for different languages as `.md` files.
+The required pip modules are listed in the `requirements.txt` file.
 
-The names for the responsible deputy and person are stored in the repository github secrets (`Settings` -> `Security` -> `Secret and variables` -> `Actions` -> `Secrets` -> `Repository secrets`) to avoid personal info leak. They are in json format like this:
+You have to create a `.env` file with the same variables as in `.env.example`.
 
-- RESPONSIBLE_DEPUTY_JSON
-    - `{"givenName":"John","familyName":"Doe","email":"john.doe@example.com"}`
-- RESPONSIBLE_PERSON_JSON
-    - `{"givenName":"Jacques","familyName":"Dupont","email":"jacques.dupont@example.com"}`
+The following env variables are needed:
+- `I14Y_API_BASE_URL`: i14y api url (different for ABN/DEV/PROD)
+- `GET_TOKEN_URL`: url to generate i14y token (different for ABN/DEV/PROD)
+- `CLIENT_ID`: client id to generate i14y token
+- `CLIENT_SECRET`: client secret to generate i14y token
+- `CHOP_YEAR`: Chop year
+- `CHOP_REVISION`: Chop revision (usually 99)
+- `RESPONSIBLE_DEPUTY_GIVENNAME`: Given name for responsible deputy
+- `RESPONSIBLE_DEPUTY_FAMILYNAME`: Family name for responsible deputy
+- `RESPONSIBLE_DEPUTY_EMAIL`: Email for responsible deputy
+- `RESPONSIBLE_PERSON_GIVENNAME`: Given name for responsible person
+- `RESPONSIBLE_PERSON_FAMILYNAME`: Family name for responsible person
+- `RESPONSIBLE_PERSON_EMAIL`: Email for responsible person
 
-The year and revision are defined in Github env variables (`Settings` -> `Security` -> `Secret and variables` -> `Actions` -> `Variables` -> `Repository variables`) this way we don't need to change the code each year:
-- CHOP_YEAR
-- CHOP_REVISION
-
-The url for the CHOP API (`CHOP_API_BASE_URL`) is defined in `config.py`.
-
-`GET_TOKEN_URL` and `I14Y_API_BASE_URL` are defined in the workflow yaml files because they change between ABN and Prod.
+The CHOP API provides the codeListEntries. The title and description for the concept are defined in the `templates` folder for different languages as `.md` files. The placeholder `{YEAR}` in those file will be replaced by the provided `CHOP_YEAR` env variable.
 
 Parameters for the I14Y concept that are unlikely to change are defined in the `build_data` function in `CHOPImporter.py` file.

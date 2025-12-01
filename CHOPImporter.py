@@ -6,9 +6,25 @@ import urllib3
 import json
 import os
 
-from config import CHOP_API_BASE_URL, CHOP_REVISION, CHOP_YEAR, CLIENT_KEY, CLIENT_SECRET, GET_TOKEN_URL, I14Y_API_BASE_URL, RESPONSIBLE_DEPUTY_JSON, RESPONSIBLE_PERSON_JSON, TEMPLATES_DIR
+from config import (
+    CHOP_API_BASE_URL,
+    CHOP_REVISION,
+    CHOP_YEAR,
+    CLIENT_ID,
+    CLIENT_SECRET,
+    GET_TOKEN_URL,
+    I14Y_API_BASE_URL,
+    RESPONSIBLE_DEPUTY_EMAIL,
+    RESPONSIBLE_DEPUTY_FAMILYNAME,
+    RESPONSIBLE_DEPUTY_GIVENNAME,
+    RESPONSIBLE_PERSON_EMAIL,
+    RESPONSIBLE_PERSON_FAMILYNAME,
+    RESPONSIBLE_PERSON_GIVENNAME,
+    TEMPLATES_DIR,
+)
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 
 class CHOPImporter:
 
@@ -26,7 +42,7 @@ class CHOPImporter:
             GET_TOKEN_URL,
             data=data,
             verify=False,
-            auth=(CLIENT_KEY, CLIENT_SECRET),
+            auth=(CLIENT_ID, CLIENT_SECRET),
         )
         if response.status_code >= 400:
             raise Exception("Failed to get token")
@@ -199,10 +215,20 @@ class CHOPImporter:
         data["conceptType"] = "CodeList"
         data["publisher"] = {"identifier": "CH1"}
 
-        data["responsibleDeputy"] = json.loads(RESPONSIBLE_DEPUTY_JSON)
-        data["responsiblePerson"] = json.loads(RESPONSIBLE_PERSON_JSON)
+        data["responsibleDeputy"] = {
+            "givenName": RESPONSIBLE_DEPUTY_GIVENNAME,
+            "familyName": RESPONSIBLE_DEPUTY_FAMILYNAME,
+            "email": RESPONSIBLE_DEPUTY_EMAIL,
+        }
+
+        data["responsiblePerson"] = {
+            "givenName": RESPONSIBLE_PERSON_GIVENNAME,
+            "familyName": RESPONSIBLE_PERSON_FAMILYNAME,
+            "email": RESPONSIBLE_PERSON_EMAIL,
+        }
 
         return data
+
 
 if __name__ == "__main__":
     importer = CHOPImporter(int(CHOP_YEAR), int(CHOP_REVISION))
