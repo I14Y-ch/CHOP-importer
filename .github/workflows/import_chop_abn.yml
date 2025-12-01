@@ -27,4 +27,6 @@ jobs:
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET_ABN }}
         GET_TOKEN_URL: "https://identity-a.bit.admin.ch/realms/bfs-sis-a/protocol/openid-connect/token"
         I14Y_API_BASE_URL: "https://api-a.i14y.admin.ch/api/partner/v1"
+        CHOP_YEAR: ${{ vars.CHOP_YEAR }}
+        CHOP_REVISION: ${{ vars.CHOP_REVISION }}
       run: python CHOPImporter.py
