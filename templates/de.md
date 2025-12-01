@@ -17,3 +17,5 @@ Ein «Typ» kann mit einer Zeile mit dem Header «Titel» oder «Text» ergänzt
 «B», «I», «S», «X» und «N» geben unter dem Header «Text» den Text an.
 «Lateral» wird unter dem Header «Typ» nur angegeben, wenn die Seitigkeit für diesen Kode erfasst werden muss. Fehlt die Angabe «Lateral», ist die Erfassung der Seitigkeit optional.
 «Codable» gibt unter dem Header «Titel» die Werte «Yes», «No» oder «Complement» an.
+
+Kontakt: MedNom@bfs.admin.ch

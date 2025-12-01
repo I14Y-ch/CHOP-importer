@@ -17,3 +17,5 @@ Un «Type» peut être complété par une ligne avec l’en-tête «Titre» ou �
 «B», «I», «S», «X» et «N» indiquent sous l’en-tête «Texte» le texte.
 «Lateral» est uniquement indiqué sous l’en-tête «Type», si la latéralité doit être saisie pour ce code. Si l’indication «Lateral» manque, la saisie de la latéralité est facultative.
 «Codable» indique sous l’en-tête «Titre» les valeurs «Yes», «No» ou «Complement».
+
+Contact: MedNom@bfs.admin.ch

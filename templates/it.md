@@ -18,3 +18,5 @@ Un «Tipo» può essere completato con una riga con l’header «Titolo» o «Te
 «B», «I», «S», «X» e «N» indicano il testo sotto l’header «Testo».
 Sotto l’header «Tipo» viene indicato «Lateral» solo qualora per questo codice debba essere registrata la lateralità. In assenza dell’indicazione «Lateral», la registrazione della lateralità è facoltativa.
 «Codable» indica i valori «Yes», «No» o «Complement» sotto l’header «Titolo».
+
+Contatto: MedNom@bfs.admin.ch
