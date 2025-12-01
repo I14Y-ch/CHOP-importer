@@ -6,7 +6,7 @@ import urllib3
 import json
 import os
 
-from config import CHOP_API_BASE_URL, CHOP_REVISION, CHOP_YEAR, CLIENT_KEY, CLIENT_SECRET, GET_TOKEN_URL, I14Y_API_BASE_URL, TEMPLATES_DIR
+from config import CHOP_API_BASE_URL, CHOP_REVISION, CHOP_YEAR, CLIENT_KEY, CLIENT_SECRET, GET_TOKEN_URL, I14Y_API_BASE_URL, RESPONSIBLE_DEPUTY_JSON, RESPONSIBLE_PERSON_JSON, TEMPLATES_DIR
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -199,10 +199,8 @@ class CHOPImporter:
         data["conceptType"] = "CodeList"
         data["publisher"] = {"identifier": "CH1"}
 
-        deputy_json = os.environ.get("RESPONSIBLE_DEPUTY")
-        person_json = os.environ.get("RESPONSIBLE_PERSON")
-        data["responsibleDeputy"] = json.loads(deputy_json)
-        data["responsiblePerson"] = json.loads(person_json)
+        data["responsibleDeputy"] = json.loads(RESPONSIBLE_DEPUTY_JSON)
+        data["responsiblePerson"] = json.loads(RESPONSIBLE_PERSON_JSON)
 
         return data
 
