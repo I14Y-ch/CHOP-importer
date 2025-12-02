@@ -83,6 +83,7 @@ class CHOPImporter:
             except r.exceptions.HTTPError as e:
                 print(f"\tChunk {i+1} failed: {e}")
                 print(f"\tResponse: {response.text}")
+                traceback.print_exc()
                 importer.debug_delete_concept(concept_id)
 
     def publish_i14y(self, public=False):
@@ -129,6 +130,10 @@ class CHOPImporter:
         )
         response.raise_for_status()
 
+    def debug_save_dict_to_json(self, data: dict, filepath: str, indent: int = 4):
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=indent)
+
     def debug_delete_concept(self, concept_id):
         headers = {"Authorization": self.token, "Content-Type": "application/json"}
         self.change_publication_level(concept_id, "Internal")
@@ -140,7 +145,7 @@ class CHOPImporter:
         """
         returns {
             'codeListEntries':
-                {...}
+                [{...}]
             }
         """
         url = f"{CHOP_API_BASE_URL}/chop/{self.year}/{self.revision}"
@@ -231,7 +236,7 @@ class CHOPImporter:
 
 
 if __name__ == "__main__":
-    importer = CHOPImporter(int(CHOP_YEAR), int(CHOP_REVISION))
+    importer = CHOPImporter(int(CHOP_YEAR), int(CHOP_REVISION), chunk_size=250)
     try:
         importer.publish_i14y(public=True)
     except Exception as e:
