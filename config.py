@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TEMPLATES_DIR = "templates"  # folder containing de.md, en.md, fr.md, it.md
-CHOP_API_BASE_URL = "https://mct-be-bfs-itplatformnet-p.apps.p-szb-ros-shrd-prd-01.cloud.admin.ch/api/Iop"
+CHOP_API_BASE_URL = "https://www.mct.bfs.admin.ch/api/Iop"
 
 I14Y_API_BASE_URL = os.environ["I14Y_API_BASE_URL"]
 GET_TOKEN_URL = os.environ["GET_TOKEN_URL"]

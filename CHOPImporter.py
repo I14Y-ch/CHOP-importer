@@ -136,7 +136,11 @@ class CHOPImporter:
 
     def debug_delete_concept(self, concept_id):
         headers = {"Authorization": self.token, "Content-Type": "application/json"}
-        self.change_publication_level(concept_id, "Internal")
+        try:
+            self.change_publication_level(concept_id, "Internal")
+        except Exception as e:
+            # If concept is already internal we have an exception so we try to delete anyway
+            pass
         response = r.delete(I14Y_API_BASE_URL + "/concepts/" + concept_id, headers=headers, verify=False)
         response.raise_for_status()
         print(f"Deleted concept with id {concept_id}")

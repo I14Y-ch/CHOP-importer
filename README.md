@@ -11,6 +11,7 @@ The following env variables are needed:
 - `GET_TOKEN_URL`: url to generate i14y token (different for ABN/DEV/PROD)
 - `CLIENT_ID`: client id to generate i14y token
 - `CLIENT_SECRET`: client secret to generate i14y token
+- `CHOP_API_BASE_URL`: MCT API url
 - `CHOP_YEAR`: Chop year
 - `CHOP_REVISION`: Chop revision (usually 99)
 - `RESPONSIBLE_DEPUTY_GIVENNAME`: Given name for responsible deputy
@@ -19,6 +20,7 @@ The following env variables are needed:
 - `RESPONSIBLE_PERSON_GIVENNAME`: Given name for responsible person
 - `RESPONSIBLE_PERSON_FAMILYNAME`: Family name for responsible person
 - `RESPONSIBLE_PERSON_EMAIL`: Email for responsible person
+- `TEMPLATES_DIR`: Folder containing description and title in different languages in `.md` files
 
 The CHOP API provides the codeListEntries. The title and description for the concept are defined in the `templates` folder for different languages as `.md` files. The placeholder `{YEAR}` in those file will be replaced by the provided `CHOP_YEAR` env variable.
 
