@@ -1,10 +1,15 @@
 # Title
+
 Schweizerische Operationsklassifikation (CHOP) - Systematisches Verzeichnis - Version {YEAR}
+
 # Description
+
 Die schweizerische Operationsklassifikation (CHOP) dient der Erfassung von Behandlungen im Rahmen der Erhebung Spitalstationäre Gesundheitsversorgung (SpiGes).
 
 In der Einleitung des systematischen Verzeichnisses (PDF) der CHOP können die Informationen zur Grundlage, zu den inhaltlichen Änderungen und zu den technischen Bemerkungen entnommen werden. Die deutschsprachige PDF-Version des systematischen Verzeichnisses ist die Referenzversion.
-Die PDF- und CSV-Dateien der systematischen und alphabetischen Verzeichnisse sowie die Überleitungstabelle und die Multilang-Tabelle stehen auf folgender Internetseite des BFS zur Verfügung: https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit/nomenklaturen/medkk/instrumente-medizinische-kodierung.html
+
+Die PDF- und CSV-Dateien des systematischen Verzeichnisses sowie die CSV-Datei des alphabetischen Verzeichnisses (dessen PDF-Datei ab 2026 nicht mehr erstellt wird) ebenso wie die Überleitungstabelle und die Multilang-Tabelle stehen auf folgender Internetseite des BFS zur Verfügung:
+https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit/nomenklaturen/medkk/instrumente-medizinische-kodierung.html
 
 Die Publikation auf der I14Y-Interoperabilitätsplattform dient primär der Bereitstellung des JSON-Formats. (Auf der I14Y steht ebenfalls eine CSV-Datei der CHOP zum Download zur Verfügung. Diese entspricht nicht den oben genannten CSV-Dateien.)
 

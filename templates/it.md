@@ -1,10 +1,14 @@
 # Title
+
 Classificazione Svizzera degli Interventi Chirurgici (CHOP) – Indice sistematico – Versione {YEAR}
+
 # Description
+
 La Classificazione Svizzera degli Interventi Chirurgici (CHOP) serve per la rilevazione dei trattamenti nell’ambito della rilevazione Assistenza sanitaria ospedaliera stazionaria (SpiGes).
 
 Sia diverse informazioni sulle fonti e sulle modifiche del contenuto che le note tecniche sulla CHOP possono essere consultate nell’introduzione all’indice sistematico (PDF). La versione di riferimento dell’indice sistematico è il PDF in tedesco.
-I file PDF e CSV dell’indice sistematico e dell’indice alfabetico come pure la tabella di conversione e la tabella Multilang sono a disposizione alla seguente pagina Internet dell’UST:
+
+I file PDF e CSV dell’indice sistematico, il file CSV dell’indice alfabetico (il cui file PDF non sarà più prodotto a partire dal 2026), la tabella di conversione e la tabella Multilang sono disponibili alla seguente pagina Internet dell’UST:
 https://www.bfs.admin.ch/bfs/it/home/statistiche/salute/nomenclature/medkk/strumenti-codifica-medica.html
 
 La pubblicazione della CHOP sulla piattaforma di interoperabilità I14Y serve principalmente per mettere a disposizione il formato JSON. (Sulla piattaforma I14Y è disponibile anche un file CSV della CHOP da scaricare, che non corrisponde ai file CSV summenzionati.)

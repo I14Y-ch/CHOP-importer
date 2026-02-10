@@ -242,7 +242,7 @@ class CHOPImporter:
 if __name__ == "__main__":
     importer = CHOPImporter(int(CHOP_YEAR), int(CHOP_REVISION), chunk_size=250)
     try:
-        importer.publish_i14y(public=True)
+        importer.publish_i14y(public=False)
     except Exception as e:
         traceback.print_exc()
         importer.debug_delete_concept(importer.concept_id)

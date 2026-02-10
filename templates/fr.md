@@ -1,10 +1,15 @@
 # Title
+
 Classification suisse des interventions chirurgicales (CHOP) - Index systématique - Version {YEAR}
+
 # Description
+
 La classification suisse des interventions chirurgicales (CHOP) sert à saisir les traitements dans le cadre du relevé Séjours stationnaires en hôpitaux (SpiGes).
 
 Les informations sur le contexte, les modifications du contenu et les remarques techniques sur la CHOP peuvent être consultées dans l’introduction de l’index systématique (PDF). La version allemande de l’index systématique au format PDF constitue la version de référence.
-Les fichiers PDF et CSV des index systématiques et alphabétiques ainsi que les tables de conversion et Multilang sont disponibles sur le site internet de l’OFS sous: https://www.bfs.admin.ch/bfs/fr/home/statistiques/sante/nomenclatures/medkk/instruments-codage-medical.html
+
+Les fichiers PDF et CSV de l’index systématique ainsi que le fichier CSV de l’index alphabétique (dont le fichier PDF ne sera plus produit à partir de 2026), tout comme les tables de conversions et Multilang, sont disponibles sur le site internet de l'OFS sous:
+https://www.bfs.admin.ch/bfs/fr/home/statistiques/sante/nomenclatures/medkk/instruments-codage-medical.html
 
 La publication sur l’I14Y plateforme d’interopérabilité sert principalement à mettre à disposition le format JSON. (Un fichier CSV de la CHOP peut être téléchargé depuis l’I14Y. Ce fichier ne correspond pas aux fichiers mentionnés ci-dessus.)
 
